@@ -156,8 +156,8 @@ public class MainLayout extends AppCompatActivity {
     BottomNavFragmentStateAdapter adapter = new BottomNavFragmentStateAdapter(this);
     pager.setAdapter(adapter);
 
-    // Allows swiping between tabs
-    pager.setUserInputEnabled(true);
+    // Only allow changing pages with the bottom navigation tabs
+    pager.setUserInputEnabled(false);
 
     // Attach the TabLayout to the ViewPager2 using a TabLayoutMediator.
     // The mediator synchronizes the selected tab with the displayed page in the ViewPager2,
