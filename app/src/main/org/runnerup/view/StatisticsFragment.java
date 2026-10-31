@@ -287,8 +287,9 @@ public class StatisticsFragment extends Fragment implements Constants, LoaderCal
               return index >= 0 && index < labels.size() ? labels.get(index) : "";
             });
 
-    chart.setVisibleXRangeMaximum(12f);
-    chart.moveViewToX(0f);
+    final int maxVisibleBars = 12;
+    chart.setVisibleXRangeMaximum(maxVisibleBars);
+    chart.moveViewToX(Math.max(0f, n - maxVisibleBars));
     chart.invalidate();
   }
 
